@@ -1,0 +1,54 @@
+:root {
+    --light: 0.1;
+    --glow: 5px;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Monda", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.night {
+    height: 100vh;
+    background-color: black;
+    opacity: calc(1 - var(--light));
+}
+
+.neon {
+    font-size: 4rem;
+    color: #47ff00;
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
+    letter-spacing: .5rem;
+    text-shadow: rgba(255,255,255,0.8) 0 0 calc(5 * var(--glow)), #47ff00 0 0 var(--glow);
+    opacity: var(--light);
+}
+
+i.fa {
+    font-size: 16rem;
+    letter-spacing: 2.5rem;
+}
+
+input {
+    position: absolute;
+    width: 300px;
+    top: 30px;
+    left: 30px;
+    height: 100px;
+}
+
+@media (min-width: 1025px) {
+    html {
+        font-size: 20px;
+    }
+}
